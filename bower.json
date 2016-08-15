@@ -1,0 +1,23 @@
+{
+  "name": "wp",
+  "description": "n",
+  "main": "n",
+  "authors": [
+    "wolinyy <wl1989yy@126.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "jquery#1",
+    "bootstrap": "^3.3.7",
+    "html5shiv": "^3.7.3",
+    "respond": "^1.4.2"
+  }
+}
