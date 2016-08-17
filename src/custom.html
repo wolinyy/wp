@@ -16,7 +16,7 @@
     <link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/index.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -26,52 +26,105 @@
 </head>
 <body>
 
-    <!-- Fixed navbar -->
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <!--头部-->
+    <nav class="navbar navbar-wp navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Project name</a>
+                <a class="navbar-brand" href="#">
+                    <h1 class="sr-only">WiFi Portal定制</h1>
+                    <img alt="WiFi Portal定制" src="images/logo.png">
+                </a>
             </div>
-            <div class="collapse navbar-collapse">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li class="divider"></li>
-                            <li class="dropdown-header">Nav header</li>
-                            <li><a href="#">Separated link</a></li>
-                            <li><a href="#">One more separated link</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div><!--/.nav-collapse -->
+            <ul class="nav navbar-nav hidden-xs hidden-sm">
+                <li class="active"><a href="#">文字</a></li>
+                <li><a href="#">背景</a></li>
+                <li><a href="#">音乐</a></li>
+                <li><a href="#">视频</a></li>
+                <li><a href="#">图片</a></li>
+                <li><a href="#">图片</a></li>
+                <li><a href="#">形状</a></li>
+                <li><a href="#">图集</a></li>
+                <li><a href="#">互动</a></li>
+                <li><a href="#">表单</a></li>
+                <li><a href="#">特效</a></li>
+            </ul>
+            <div class="nav navbar-right hidden-xs hidden-sm">
+                <button class="btn navbar-btn btn-sm btn-primary">设置</button>
+                <button class="btn btn-sm btn-primary">保存</button>
+                <button class="btn btn-sm btn-primary">发布</button>
+                <button class="btn btn-sm btn-danger">退出</button>
+            </div>
         </div>
     </nav>
-
-    <!-- Begin page content -->
-    <div class="container">
-        <div class="page-header">
-            <h1>Sticky footer with fixed navbar</h1>
-        </div>
-        <p class="lead">Pin a fixed-height footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS. A fixed navbar has been added with <code>padding-top: 60px;</code> on the <code>body > .container</code>.</p>
-        <p>Back to <a href="../sticky-footer">the default sticky footer</a> minus the navbar.</p>
-    </div>
-
-    <div class="footer">
-        <div class="container">
-            <p class="text-muted">Place sticky footer content here.</p>
+    <!--主体-->
+    <div class="main">
+        <div class="relate">
+            <div class="left">
+                <!-- Nav tabs -->
+                <div id="leftNav">
+                    <ul class="nav nav-tabs nav-justified">
+                        <li class="active"><a href="#tempCenter" data-toggle="tab">模板中心</a></li>
+                        <li><a href="#tempMe" data-toggle="tab">我的模板</a></li>
+                    </ul>
+                </div>
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div class="tab-pane active row" id="tempCenter">
+                        <div class="col-xs-4">
+                            <select class="form-control input-sm">
+                                <option>用途</option>
+                                <option>招聘</option>
+                                <option>简历</option>
+                                <option>表格</option>
+                                <option>节日</option>
+                            </select>
+                        </div>
+                        <div class="col-xs-4">
+                            <select class="form-control  input-sm">
+                                <option>功能</option>
+                                <option>背景</option>
+                                <option>图集</option>
+                                <option>表单</option>
+                                <option>互动</option>
+                            </select>
+                        </div>
+                        <div class="col-xs-4">
+                            <select class="form-control  input-sm">
+                                <option>风格</option>
+                                <option>纯色</option>
+                                <option>黑白</option>
+                                <option>绚丽</option>
+                                <option>怀旧</option>
+                                <option>现代</option>
+                                <option>小清新</option>
+                                <option>扁平化</option>
+                                <option>中国风</option>
+                                <option>欧美风</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="tempMe">我的模板</div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="opts clearfix">
+                    <div class=" pull-right">
+                        <button class="btn btn-sm btn-default"><span class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button>
+                        <button class="btn btn-sm btn-default"><span class="glyphicon glyphicon-align-center" aria-hidden="true"></span></button>
+                        <button class="btn btn-sm btn-default"><span class="glyphicon glyphicon-align-right" aria-hidden="true"></span></button>
+                    </div>
+                </div>
+                <ul>
+                    <li>1</li>
+                    <li>1</li>
+                    <li>1</li>
+                    <li>1</li>
+                    <li>1</li>
+                </ul>
+            </div>
+            <div class="portal">
+                portal定制预览
+            </div>
         </div>
     </div>
 

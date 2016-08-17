@@ -1,0 +1,73 @@
+
+@import "_base";
+
+@import "_bt_custom";
+
+.main{
+  width: 100%;
+  height: 100%;
+  background: yellowgreen;
+  position: absolute;
+  padding-top: 51px;
+  //text-align: center;
+  .relate{
+    position: relative;
+    height: 100%;
+  }
+  .left{
+    background: @leftRightBgColor;
+    position: absolute;
+    height: 100%;
+    width: @mainLeftWidth;
+    #leftNav{
+      padding-top: 10px;
+      background: @leftFontColor;
+      >ul{
+        width: 90%;
+        margin: 0 auto;
+        li{
+          a{
+            margin: 0 2px;
+            color: @mainBgColor;
+            border-bottom: 0;
+            &:hover{
+              background: @leftRightBgColor;
+              color: @leftFontColor;
+            }
+          }
+        }
+        li.active{
+          a{
+            background: @leftRightBgColor;
+            color: @leftFontColor;
+          }
+        }
+      }
+    }
+    #tempCenter{
+      margin: 0;
+      >div{
+        padding: 10px;
+      }
+    }
+  }
+  .right{
+    background: @leftRightBgColor;
+    position: absolute;
+    right: 0;
+    width: @mainRightWidth;
+    height: 100%;
+    .opts{
+      background: @leftFontColor;
+      padding: 10px;
+    }
+  }
+  .portal{
+    margin: 0 auto;
+    width: 100%;
+    background: @centerBgColor;
+    height: 100%;
+    padding-left: @mainLeftWidth;
+    padding-right: @mainRightWidth;
+  }
+}
