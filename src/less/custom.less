@@ -6,19 +6,25 @@
 .main{
   width: 100%;
   height: 100%;
-  background: yellowgreen;
+  min-height: 600px;
+  background: @mainBgColor;
   position: absolute;
   padding-top: 51px;
-  //text-align: center;
+  overflow-x: hidden;
   .relate{
-    position: relative;
     height: 100%;
+    padding-left: @mainLeftWidth;
+    padding-right: @mainRightWidth;
+    overflow-x: hidden;
+    position: relative;
   }
   .left{
     background: @leftRightBgColor;
     position: absolute;
+    left: 0;
     height: 100%;
     width: @mainLeftWidth;
+    z-index: 1;
     #leftNav{
       padding-top: 10px;
       background: @leftFontColor;
@@ -57,17 +63,75 @@
     right: 0;
     width: @mainRightWidth;
     height: 100%;
+    z-index: 1;
     .opts{
       background: @leftFontColor;
       padding: 10px;
+    }
+    .pages{
+      li{
+        border: 1px solid lighten(@leftFontColor, 25%);
+        margin: 8px;
+        padding: 20px 10px 20px 40px;
+        color: @leftFontColor;
+        cursor: pointer;
+        position: relative;
+        counter-increment:my;
+        &:before{
+          content: ' ';
+          position: absolute;
+          top: 0;
+          left: 0;
+          background: transparent;
+          border: 20px solid red;
+          border-color: @leftFontColor transparent transparent @leftFontColor;
+          z-index: 0;
+        }
+        &:after{
+          content: counter(my);
+          color: @FontColor;
+          position: absolute;
+          top: 4px;
+          left: 8px;
+          z-index: 1;
+          font-size:12px;
+        }
+        &:hover{
+          background: lighten(@mainBgColor, 10%);
+          //padding: 21px 10px 20px 41px;
+          margin: 8px 7px 7px 7px;
+        }
+      }
+      li.active{
+        background: lighten(@mainBgColor, 10%);
+        //margin: 8px 7px 7px 7px;
+        &:before{
+          border-color: @mainColor transparent transparent @mainColor;
+        }
+      }
     }
   }
   .portal{
     margin: 0 auto;
     width: 100%;
-    background: @centerBgColor;
     height: 100%;
-    padding-left: @mainLeftWidth;
-    padding-right: @mainRightWidth;
+    background: @centerBgColor;
+    position: relative;
+    .phoneDiv{
+      width: 260px;
+      height: 390px;
+      margin: 0 auto;
+      border-style: solid;
+      border-color: @mainBgColor;
+      border-width: 40px 15px;
+      border-radius: 20px;
+      box-shadow: 2px 2px 10px 1px #76838F;
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      margin-left: -160px;
+      box-sizing: content-box;
+    }
   }
 }
+@import "portal";
